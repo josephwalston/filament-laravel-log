@@ -11,10 +11,12 @@ use Saade\FilamentLaravelLog\FilamentLaravelLogPlugin;
 use Saade\FilamentLaravelLog\Pages\Concerns\HasActions;
 use Symfony\Component\Finder\Finder;
 use Symfony\Component\Finder\SplFileInfo;
+use BezhanSalleh\FilamentShield\Traits\HasPageShield;
 
 class ViewLog extends Page
 {
     use HasActions;
+    use HasPageShield;
 
     protected static string $view = 'filament-laravel-log::view-log';
 
