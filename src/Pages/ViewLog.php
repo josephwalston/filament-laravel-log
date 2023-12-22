@@ -18,6 +18,14 @@ class ViewLog extends Page
 
     protected static string $view = 'filament-laravel-log::view-log';
 
+    /**
+     * @return bool
+     */
+    public static function shouldRegisterNavigation(): bool
+    {
+        return false;
+    }
+
     public ?string $logFile = null;
 
     public function form(Form $form): Form
